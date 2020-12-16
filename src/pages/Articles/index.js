@@ -1,11 +1,14 @@
 import Header from "../../components/Header";
-import { Text } from "./styles";
+import { Container, Logo, Main } from "./styles";
 
 const ArticlesPage = () => {
   return (
     <>
       <Header />
-      <Text>Desafio</Text>
+      <Container>
+        <Logo />
+      </Container>
+      <Main></Main>
     </>
   );
 };

@@ -8,4 +8,5 @@ export const colors = {
   error: '#F5222D',
   warning: '#FADB14',
   black: '#000000',
+  shadow: 'rgba(0, 0, 0, 0.2)',
 }

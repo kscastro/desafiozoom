@@ -8,16 +8,16 @@ export const Container = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 16px;
-  background-color: #fff;
+  background-color:${({ theme }) => theme.colors.white};;
   border: none;
   border-radius: 24px;
-  color: #333;
+  color:${({ theme }) => theme.colors.black};
   height: 48px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 ${({ theme }) => theme.colors.shadow};;
   box-sizing: border-box;
   padding-left: 30px;
+  outline:none;
 `;
 
