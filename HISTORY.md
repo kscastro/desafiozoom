@@ -12,5 +12,6 @@ Como só vamos ter uma pagina mantive as rotas dentro do APP.js se tivesse mais 
 
 Criei o folder da pagina de artigos contendo o index e o styles.
 
+No incio da criação do componente Header utilizei a configuração de themeprovider do styled components.
 
 
