@@ -1,9 +1,18 @@
+import { GlobalStyle } from "./styles/global";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Articles from "./pages/Articles/index";
+
 const App = () => {
   return (
-    <div>
-      <h1>Desafio Zoom</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Articles} />
+        </Switch>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;

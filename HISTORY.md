@@ -6,3 +6,11 @@ Depois instalei algumas lib que vão ser usadas no projeto como (styled-componen
 
 Finalizando criei os diretorios de pastas components, pages, service e utils.
 
+Adicionei um reset.css para facilicar o desenvolvimento. 
+
+Como só vamos ter uma pagina mantive as rotas dentro do APP.js se tivesse mais de uma iria separar em um arquivo route.js.
+
+Criei o folder da pagina de artigos contendo o index e o styles.
+
+
+
