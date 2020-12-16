@@ -1,7 +1,13 @@
-import { Text } from "./styles"
+import Header from "../../components/Header";
+import { Text } from "./styles";
 
-const Articles = () => <Text>Desafio</Text>
+const ArticlesPage = () => {
+  return (
+    <>
+      <Header />
+      <Text>Desafio</Text>
+    </>
+  );
+};
 
-
-
-export default Articles
+export default ArticlesPage;
