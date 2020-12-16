@@ -20,4 +20,14 @@ export const Logo = styled.img.attrs({
   src: `${logopage}`,
 })``;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  max-width: 1140px;
+  width: 95%;
+  top: -70px;
+  position: relative;
+  justify-content: space-between;
+`;
