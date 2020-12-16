@@ -24,7 +24,7 @@
 
 ## History
 
-Você pode acompanhar as decisões tomadas no projeto neste link.
+Você pode acompanhar as decisões tomadas no projeto neste [HISTORY](https://github.com/kscastro/desafiozoom/blob/master/HISTORY.md).
 
 
 
