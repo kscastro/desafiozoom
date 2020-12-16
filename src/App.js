@@ -1,8 +1,6 @@
-import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <h1>Desafio Zoom</h1>
     </div>
   );
