@@ -18,7 +18,11 @@ export const Container = styled.div`
 `;
 export const Logo = styled.img.attrs({
   src: `${logopage}`,
-})``;
+})`
+
+width: 240px;
+
+`;
 
 export const Main = styled.main`
   margin: 0 auto;

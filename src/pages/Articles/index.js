@@ -19,8 +19,8 @@ const ArticlesPage = () => {
       });
 
       const headers = {
-        "x-algolia-api-key": "",
-        "x-algolia-application-id": "",
+        "x-algolia-api-key": "6097db7ff0b7b706bec46bd54fb36556",
+        "x-algolia-application-id": "testing84XGRQ4I0V",
       };
 
       const response = await axios.post(
@@ -51,6 +51,7 @@ const ArticlesPage = () => {
                 title={article.title}
                 subtitle={article.subtitle}
                 author={article.author.name}
+                href={article.url}
               />
             ))
           : "erro"}

@@ -6,17 +6,22 @@ import {
   Title,
   Subtitle,
   Author,
+  Link,
 } from "./styles";
 
-const Card = ({ src, tag, title, subtitle, author }) => {
+const Card = ({ href, src, tag, title, subtitle, author }) => {
   return (
     <Container>
-      <ImageCard src={src} />
+      <Link href={href}>
+        <ImageCard src={src} loading="lazy" />
+      </Link>
       <Description>
         <Tag>{tag}</Tag>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <Author>{author}</Author>
+        <Link href={href}>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          <Author>{author}</Author>
+        </Link>
       </Description>
     </Container>
   );

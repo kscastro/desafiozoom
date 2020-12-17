@@ -14,4 +14,7 @@ Criei o folder da pagina de artigos contendo o index e o styles.
 
 No incio da criação do componente Header utilizei a configuração de themeprovider do styled components.
 
+Para fazer a requisição para o back end estou usando o axios.
+
+
 

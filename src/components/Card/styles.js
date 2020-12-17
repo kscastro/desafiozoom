@@ -8,11 +8,10 @@ export const Container = styled.div`
   border: 1px solid #ecf0f1;
   background-color: #fff;
   margin: 0 20px 40px;
+  
 `;
 
-export const ImageCard = styled.img.attrs(
-  props => ({'src': props.src})
-)`
+export const ImageCard = styled.img.attrs((props) => ({ src: props.src }))`
   width: 100%;
   height: 182.4px;
   border-radius: 8px 8px 0px 0px;
@@ -27,7 +26,6 @@ export const Description = styled.div`
   margin: 0;
   padding: 30px;
   font-size: 14px;
-  height: calc(100% - 122px);
   overflow: hidden;
 `;
 
@@ -37,6 +35,7 @@ export const Tag = styled.a`
   font-weight: 700;
   color: #3790f8;
   cursor: pointer;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.h3`
@@ -48,6 +47,7 @@ export const Title = styled.h3`
   color: #333;
   text-transform: none;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const Subtitle = styled.p`
@@ -60,6 +60,7 @@ export const Subtitle = styled.p`
   color: #666;
   max-height: 65px;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const Author = styled.p`
@@ -69,4 +70,11 @@ export const Author = styled.p`
   font-family: Roboto;
   font-size: 16px;
   color: #777;
+  font-family: 'Roboto', sans-serif;
+`;
+
+export const Link = styled.a`
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
 `;
