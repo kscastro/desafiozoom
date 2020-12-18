@@ -9,17 +9,38 @@ const searchClient = algoliasearch(
   "62787d4c518c998497a73013fb8a4180"
 );
 
+
 const ArticlesPage = () => {
   return (
     <>
-      <InstantSearch indexName="challenge_article_v2_items" searchClient={searchClient}>
+      <InstantSearch
+        indexName="challenge_article_v2_items"
+        searchClient={searchClient}
+      >
         <Header />
         <Container>
           <Logo />
         </Container>
         <Main>
-          <CustomHits/>
-          <Pagination/>
+          <CustomHits />
+          <Pagination
+            translations={{
+              previous: "‹",
+              next: "›",
+              first: "«",
+              last: "»",
+              page(currentRefinement) {
+                return currentRefinement;
+              },
+              ariaPrevious: "Previous page",
+              ariaNext: "Next page",
+              ariaFirst: "First page",
+              ariaLast: "Last page",
+              ariaPage(currentRefinement) {
+                return `Page ${currentRefinement}`;
+              },
+            }}
+          />
         </Main>
       </InstantSearch>
     </>
