@@ -8,23 +8,28 @@ import {
   Author,
   Link,
 } from "./styles";
+import { connectHits } from "react-instantsearch-dom";
 
-const Card = ({ href, src, tag, title, subtitle, author }) => {
+const Card = ({ hits }) => {
   return (
-    <Container>
-      <Link href={href}>
-        <ImageCard src={src} loading="lazy" />
-      </Link>
-      <Description>
-        <Tag>{tag}</Tag>
-        <Link href={href}>
-          <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
-          <Author>{author}</Author>
-        </Link>
-      </Description>
-    </Container>
+    <>
+     {hits.map(hit => (
+       <Container key={hit.id}>
+       <Link>
+         <ImageCard src={hit.imageUrl} loading="lazy" />
+       </Link>
+       <Description>
+         <Tag>{hit.tag}</Tag>
+         <Link>
+           <Title>{hit.title}</Title>
+           <Subtitle>{hit.subtitle}</Subtitle>
+           <Author>{hit.author.name}</Author>
+         </Link>
+       </Description>
+     </Container>
+    ))}
+    </>
   );
 };
 
-export default Card;
+export const CustomHits = connectHits(Card);
