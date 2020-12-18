@@ -16,5 +16,7 @@ No incio da criação do componente Header utilizei a configuração de themepro
 
 Para fazer a requisição para o back end estou usando o axios.
 
+Lendo a documentação do algolia vi que não era necessario fazer as requisições para search, hits e paginação na mão, vou modificar os componentes para usar está lib.
+
 
 
