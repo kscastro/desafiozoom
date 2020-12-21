@@ -3,7 +3,6 @@ import logo from "../../assets/logo.svg";
 
 export const Container = styled.header`
   display: flex;
-  width: 100%;
   min-height: 60px;
   background: ${({ theme }) => theme.colors.primary};
   box-sizing: border-box;

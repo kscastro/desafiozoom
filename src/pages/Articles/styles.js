@@ -3,15 +3,14 @@ import background from "../../assets/background.png";
 import logopage from "../../assets/deumzoom_logo.svg";
 
 export const Container = styled.div`
-  background: #612a92;
+  background: ${({ theme }) => theme.colors.primary};
   background-image: url(${background});
   background-size: cover;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vw 0;
   min-height: 200px;
   max-height: 450px;
   text-align: left;
@@ -19,9 +18,7 @@ export const Container = styled.div`
 export const Logo = styled.img.attrs({
   src: `${logopage}`,
 })`
-
-width: 240px;
-
+  width: 240px;
 `;
 
 export const Main = styled.main`
@@ -34,4 +31,34 @@ export const Main = styled.main`
   top: -70px;
   position: relative;
   justify-content: space-between;
+`;
+
+export const Footer = styled.footer`
+  background: ${({ theme }) => theme.colors.primary};
+  background-image: url(${background});
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  min-height: 200px;
+  max-height: 450px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  flex-wrap:wrap;
+`;
+
+export const Title = styled.h1`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.white};
+  font-family: "Roboto", sans-serif;
+`;
+
+export const Wrapper = styled.div`
+  margin-left: 10px;
 `;

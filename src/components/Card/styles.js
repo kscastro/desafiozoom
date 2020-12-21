@@ -5,9 +5,10 @@ export const Container = styled.div`
   height: auto;
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #ecf0f1;
-  background-color: #fff;
+  border: 1px solid ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   margin: 0 20px 40px;
+  width: 100%;
   
 `;
 
@@ -33,7 +34,7 @@ export const Tag = styled.a`
   font-family: Roboto;
   font-size: 14px;
   font-weight: 700;
-  color: #3790f8;
+  color: ${({ theme }) => theme.colors.alternative};
   cursor: pointer;
   margin-bottom: 10px;
 `;
@@ -41,10 +42,9 @@ export const Tag = styled.a`
 export const Title = styled.h3`
   margin: 0;
   padding: 0;
-  font-family: Montserrat;
   font-size: 18px;
   font-weight: 700;
-  color: #333;
+  color: ${({ theme }) => theme.colors.gray};
   text-transform: none;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
@@ -57,7 +57,7 @@ export const Subtitle = styled.p`
   font-size: 18px;
   font-weight: 400;
   line-height: 1.33;
-  color: #666;
+  color: ${({ theme }) => theme.colors.gray};
   max-height: 65px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
@@ -69,7 +69,7 @@ export const Author = styled.p`
   padding: 0;
   font-family: Roboto;
   font-size: 16px;
-  color: #777;
+  color: ${({ theme }) => theme.colors.gray};
   font-family: 'Roboto', sans-serif;
 `;
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Input } from "./styles";
 import { connectSearchBox } from "react-instantsearch-dom";
 
-const InputSearch = ({ currentRefinement, isSearchStalled, refine }) => {
+const InputSearch = ({ currentRefinement, refine }) => {
   return (
     <Container>
       <Input
@@ -11,7 +11,6 @@ const InputSearch = ({ currentRefinement, isSearchStalled, refine }) => {
         type="text"
         placeholder="Digite sua busca..."
       />
-      {isSearchStalled ? "My search is stalled" : ""}
     </Container>
   );
 };

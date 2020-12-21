@@ -1,6 +1,11 @@
 import Header from "../../components/Header";
-import { Container, Logo, Main } from "./styles";
-import { InstantSearch, Pagination } from "react-instantsearch-dom";
+import { Container, Logo, Main, Footer, Title, Wrapper } from "./styles";
+import {
+  InstantSearch,
+  MenuSelect,
+  Pagination,
+  ScrollTo,
+} from "react-instantsearch-dom";
 import algoliasearch from "algoliasearch/lite";
 import { CustomHits } from "../../components/Card";
 
@@ -8,7 +13,6 @@ const searchClient = algoliasearch(
   "testing84XGRQ4I0V",
   "62787d4c518c998497a73013fb8a4180"
 );
-
 
 const ArticlesPage = () => {
   return (
@@ -22,26 +26,38 @@ const ArticlesPage = () => {
           <Logo />
         </Container>
         <Main>
-          <CustomHits />
-          <Pagination
-            translations={{
-              previous: "‹",
-              next: "›",
-              first: "«",
-              last: "»",
-              page(currentRefinement) {
-                return currentRefinement;
-              },
-              ariaPrevious: "Previous page",
-              ariaNext: "Next page",
-              ariaFirst: "First page",
-              ariaLast: "Last page",
-              ariaPage(currentRefinement) {
-                return `Page ${currentRefinement}`;
-              },
-            }}
-          />
+          <ScrollTo>
+            <CustomHits />
+          </ScrollTo>
         </Main>
+        <Pagination
+          translations={{
+            previous: "‹",
+            next: "›",
+            first: "«",
+            last: "»",
+            page(currentRefinement) {
+              return currentRefinement;
+            },
+            ariaPrevious: "Previous page",
+            ariaNext: "Next page",
+            ariaFirst: "First page",
+            ariaLast: "Last page",
+            ariaPage(currentRefinement) {
+              return `Page ${currentRefinement}`;
+            },
+          }}
+        />
+        <Footer>
+          <Wrapper>
+            <Title>Filtrar por Autor</Title>
+            <MenuSelect attribute="author.name" />
+          </Wrapper>
+          <Wrapper>
+            <Title>Filtrar por Categoria</Title>
+            <MenuSelect attribute="tags" />
+          </Wrapper>
+        </Footer>
       </InstantSearch>
     </>
   );
